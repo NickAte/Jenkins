@@ -1,0 +1,25 @@
+{
+    "name": "hw7cypress1-2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+    "test:login": "cypress run --record --key bbe89250-5e98-4ad0-a77d-9de9ce7d04ba --group login --spec cypress/e2e/loginAdminTest.cy.js",
+    "test:main": "cypress run --record --key bbe89250-5e98-4ad0-a77d-9de9ce7d04ba --group main --spec cypress/e2e/mainPageTest.cy.js",
+    "test:booking": "cypress run --record --key bbe89250-5e98-4ad0-a77d-9de9ce7d04ba --group booking --spec cypress/e2e/bookingMovieTest.cy.js",
+    "test:login:chrome": "cypress run --record --key bbe89250-5e98-4ad0-a77d-9de9ce7d04ba --browser chrome --group login --ci-build-id 4 --spec cypress/e2e/loginAdminTest.cy.js",
+    "test:main:edge": "cypress run --record --key bbe89250-5e98-4ad0-a77d-9de9ce7d04ba --browser edge --group main --ci-build-id 4 --spec cypress/e2e/mainPageTest.cy.js",
+    "test:booking:electron": "cypress run --record --key bbe89250-5e98-4ad0-a77d-9de9ce7d04ba --browser electron --group booking --ci-build-id 4 --spec cypress/e2e/bookingMovieTest.cy.js",
+    "test:folder1": "cypress run --record --key bbe89250-5e98-4ad0-a77d-9de9ce7d04ba --group folder1 --spec 'cypress/e2e/folder1/*'",
+    "test:folder2": "cypress run --record --key bbe89250-5e98-4ad0-a77d-9de9ce7d04ba --group folder2 --spec 'cypress/e2e/folder2/*'",
+    "test:parallel:folder": "run-p -c test:folder1 test:folder2",
+    "test:parallel:browser": "run-p -c test:login:chrome test:main:edge"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "cypress": "^12.4.0",
+        "npm-run-all": "^4.1.5"
+    }
+}
